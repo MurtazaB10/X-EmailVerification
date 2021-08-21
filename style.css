@@ -118,6 +118,9 @@
   height: 88vh;
   overflow-y: scroll;
 }
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
 .sidebar a {
   text-decoration: none;
   display: block;
