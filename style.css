@@ -233,6 +233,15 @@
     display: block;
   }
 }
+@media (max-width: 350px) {
+  .navbar form input {
+    width: 10rem;
+  }
+  .navbar .icons .fa-bell,
+  .navbar .icons .fa-envelope {
+    margin-right: 2rem;
+  }
+}
 @media (max-width: 300px) {
   .navbar form input {
     width: 10rem;
