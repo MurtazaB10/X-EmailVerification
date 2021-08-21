@@ -1,0 +1,244 @@
+:root {
+  --b-col: rgb(98, 72, 226);
+  --hb-col: rgb(32, 60, 124);
+  --ib-col: rgb(248, 248, 252);
+  --ic-col: rgb(209, 209, 209);
+  --border-col: rgb(176, 176, 202);
+  --col: white;
+}
+.navbar {
+  box-shadow: 0px 5px 34px 2px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 5px 34px 2px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0px 5px 34px 2px rgba(0, 0, 0, 0.12);
+}
+.navbar-brand {
+  width: 15rem;
+  height: 4.9rem;
+}
+.navbar-brand img {
+  width: 100%;
+}
+.navbar form {
+  width: 30rem;
+}
+.navbar form input,
+.main .input-data input {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 0;
+  border: none;
+  width: 20rem;
+  background-color: var(--ib-col);
+}
+.navbar form input:focus,
+.main .input-data input:focus {
+  box-shadow: none;
+  background-color: var(--ib-col);
+}
+.navbar form button,
+.main .input-data button {
+  border-radius: 0;
+  background-color: var(--b-col);
+  color: var(--col);
+}
+.navbar form button:hover,
+.main .input-data button:hover {
+  background-color: var(--hb-col);
+}
+.navbar form .btn:focus,
+.main .input-data .btn:focus {
+  box-shadow: none;
+}
+.navbar .right .line {
+  width: 1px;
+  height: 40px;
+  background-color: var(--ic-col);
+}
+.navbar .icons .fa-bell,
+.navbar .icons .fa-envelope {
+  cursor: pointer;
+  color: var(--ic-col);
+  margin-right: 2.5rem;
+  position: relative;
+}
+.navbar .icons .fa-bell::after,
+.navbar .icons .fa-envelope::after {
+  content: attr(data-attr);
+  position: absolute;
+  top: -8px;
+  background-color: red;
+  color: var(--col);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 5px;
+}
+.navbar .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .icons .fa-bell::after {
+  right: -8px;
+}
+.navbar .icons .fa-envelope::after {
+  right: -15px;
+}
+.navbar .profile {
+  cursor: pointer;
+}
+.navbar .profile span {
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+  color: rgb(190, 190, 190);
+  font-size: 0.8rem;
+}
+.navbar .profile img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.sidebar {
+  background: var(--col);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(97, 71, 226, 1) 0%,
+    rgba(96, 69, 225, 1) 25%,
+    rgba(71, 0, 197, 1) 100%
+  );
+  color: var(--col);
+  padding-top: 1rem;
+}
+.sidebar a {
+  text-decoration: none;
+  display: block;
+  color: var(--col);
+}
+.sidebar p {
+  text-transform: uppercase;
+  color: var(--col);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.sidebar ul li {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  color: var(--ic-col);
+}
+.sidebar .dash {
+  height: 1px;
+  background-color: var(--border-col);
+  margin: 1.33rem 0.5rem;
+}
+
+.main {
+  background-color: var(--ib-col);
+}
+.main h1 {
+  font-weight: bold;
+  margin: 1.5rem 1rem;
+  text-transform: capitalize;
+}
+.main .input-data {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .input-data label {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.main .input-data input {
+  width: 100%;
+  border: 1px solid var(--ic-col);
+  background-color: #fff;
+}
+.main .input-data input:focus {
+  background-color: #fff;
+}
+
+@media (max-width: 1535px) {
+  .sidebar .dash {
+    margin: 1.2rem 0.5rem;
+  }
+  .sidebar {
+    width: 20%;
+  }
+  .sidebar .email {
+    margin-top: -0.5rem;
+  }
+  .main {
+    width: 80%;
+  }
+}
+@media (max-width: 1250px) {
+  .sidebar {
+    width: 25%;
+  }
+  .main {
+    width: 75%;
+  }
+}
+@media (max-width: 992px) {
+  .navbar form {
+    width: 100%;
+    justify-content: center;
+    margin: 1rem auto;
+  }
+  .navbar form input {
+    width: 17rem;
+  }
+}
+@media (max-width: 950px) {
+  .sidebar,
+  .main {
+    width: 100%;
+  }
+  .main h1 {
+    font-size: 1.5rem;
+  }
+  .main .input-data label {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .main .input-data label {
+    display: block;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .main h1 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .navbar .navbar-brand {
+    width: 10rem;
+    height: 3rem;
+  }
+}
+@media (max-width: 330px) {
+  .main h1 {
+    font-size: 1rem;
+  }
+  .main .input-data label {
+    font-size: 0.7rem;
+    text-align: center;
+    display: block;
+  }
+}
+@media (max-width: 300px) {
+  .navbar form input {
+    width: 10rem;
+  }
+  .navbar .icons .fa-bell,
+  .navbar .icons .fa-envelope {
+    margin-right: 2rem;
+  }
+}
